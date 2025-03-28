@@ -1,9 +1,10 @@
-import Branch from "./models/branch";
-import Order from "./order";
-import Product from "./products";
-import Counter from "./counter";
-import Category from "./catergory";
-import { Customer, DeliveryPartner, Admin } from "./user";
+// import Branch from "./models/branch";
+import Branch from "../models/branch.js";
+import Order from "../models/order.js";
+import Product from "../models/products.js";
+import Counter from "../models/counter.js";
+import Category from "../models/catergory.js";
+import { Customer, DeliveryPartner, Admin } from "../models/user.js";
 
 export {
   Branch,
