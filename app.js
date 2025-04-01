@@ -5,8 +5,13 @@ import { PORT } from "./src/config/config.js";
 import fastifysocketIO from "fastify-socket.io";
 import { registerRoutes } from "./src/routes/index.js";
 import { admin, buildAdminRouter } from "./src/config/setup.js";
+import mongoose from "mongoose";
 
-connectDB();
+// console.log(process.env.MONGO_URI);
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected Successfully"))
+  .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 
 const start = async () => {
   const app = fastify();
